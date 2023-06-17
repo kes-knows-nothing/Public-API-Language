@@ -38,8 +38,15 @@ function World() {
             {countries.map((country) => (
                 
             <div className="countryCard" key={country.name.common}>
-            <img src={country.flags.svg} alt="flags" style={{width:"150px"}}/>
-            {country.name.common}
+                <div className="imgBox">
+                  <img src={country.flags.svg} alt="flags" style={{width:"150px"}}/>
+                </div>
+                <div className="countryMetaData">
+                    <p className="countryName">{country.name.common}</p>
+                    <p className="continents">Continents: {country.continents[0]}</p>
+                    <p className="currency">Population: {country.population}</p>
+                </div>
+                
             </div>
   ))}</div>
 
